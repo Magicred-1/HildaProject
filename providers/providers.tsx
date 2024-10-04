@@ -20,7 +20,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         events: {
           onAuthSuccess: () => {
             console.log("Auth success");
-            router.push("/");
+            router.push("/dashboard");
           },
           onLogout: () => {
             console.log("Login");

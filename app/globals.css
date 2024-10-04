@@ -10,9 +10,9 @@
 
 @layer base {
   * {
-    @apply border-black;
+    @apply border-white;
   }
   body {
-    @apply bg-white text-black;
+    @apply bg-black text-white;
   }
 }

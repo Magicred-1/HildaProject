@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 
@@ -57,9 +58,9 @@ const SidebarLogo = () => {
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className=" text-black whitespace-pre dark:text-white text-2xl font-black"
+        className="text-white whitespace-pre text-4xl font-black"
       >
-        BOundOblig
+        Hilda
       </motion.span>
     </Link>
   );
@@ -82,7 +83,7 @@ const SidebarLogoIcon = () => {
 const LINKS_ITEMS = [
   {
     label: "Dashboard",
-    href: "/",
+    href: "dashboard",
     icon: (
       <ChartArea
         className="flex-shrink-0 size-5 text-primary w-10 h-10"
@@ -90,19 +91,19 @@ const LINKS_ITEMS = [
       />
     ),
   },
-  {
-    label: "Profile",
-    href: "#dashboard",
-    icon: (
-      <Settings
-        className="flex-shrink-0 size-5 text-primary w-10 h-10"
-        strokeWidth={1.5}
-      />
-    ),
-  },
+  // {
+  //   label: "Profile",
+  //   href: "dashboard",
+  //   icon: (
+  //     <Settings
+  //       className="flex-shrink-0 size-5 text-primary w-10 h-10"
+  //       strokeWidth={1.5}
+  //     />
+  //   ),
+  // },
   {
     label: "Settings",
-    href: "#",
+    href: "settings",
     icon: (
       <Settings
         className="flex-shrink-0 size-5 text-primary w-10 h-10"

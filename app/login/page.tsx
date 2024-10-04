@@ -1,33 +1,35 @@
 "use client";
-
-import { useState, useEffect } from "react";
 import Image from "next/image";
 
-import Marquee from "@/components/ui/marquee";
 import { Button } from "@/components/ui/button";
 
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
+import { useState, useEffect, useRef } from "react"; // Add useRef
 
 export default function Login() {
+  const videoRef = useRef<HTMLVideoElement>(null); // Add this line
+
+  useEffect(() => {
+    // Auto-play the video when the component mounts
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  }, []);
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full">
-      <Header />
-      <Hero />
-      {/* <Marquee
-        items={[
-          "/logo.svg",
-          "/ill1.svg",
-          "/logo.svg",
-          "/ill1.svg",
-          "/logo.svg",
-          "/ill1.svg",
-          "/logo.svg",
-          "/ill1.svg",
-          "/logo.svg",
-          "/ill1.svg",
-        ]}
-      /> */}
-    </div>
+    <>
+      <div className="flex flex-col items-center justify-center h-full w-full absolute top-0 left-0 z-10">
+        <Header />
+        <Hero />
+      </div>
+      <video
+        ref={videoRef}
+        src="/video.mp4"
+        className="absolute top-0 right-0 w-full h-full object-cover"
+        loop
+        muted
+        playsInline
+      />
+    </>
   );
 }
 
@@ -52,7 +54,7 @@ function Header() {
     <div className="flex items-center justify-between h-[8vh] border-b-2 w-[95vw]">
       <div className="text-4xl font-black flex items-center gap-2">
         <Image src={`/logo.svg`} alt="logo" width={35} height={35} />
-        Hilda
+        H!lda
       </div>
       <div className="flex gap-8 text-xl">
         <div>about</div>
@@ -70,6 +72,15 @@ function Header() {
 
 function Hero() {
   const { setShowAuthFlow } = useDynamicContext();
+  const videoRef = useRef<HTMLVideoElement>(null); // Add this line
+
+  useEffect(() => {
+    // Auto-play the video when the component mounts
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  }, []);
+
   return (
     <div className="w-full h-[92vh] flex">
       <div className="w-full h-full relative">
@@ -88,15 +99,16 @@ function Hero() {
           Login
         </Button>
       </div>
-      <div className="w-full h-full relative overflow-hidden">
-        <Image
-          src={`/ill1.svg`}
-          alt="login"
-          width={600}
-          height={600}
-          className="absolute top-16 right-10"
+      {/* <div className="w-full h-full relative overflow-hidden">
+        <video
+          ref={videoRef}
+          src="/video.mp4"
+          className="absolute top-0 right-0 w-full h-full object-cover"
+          loop
+          muted
+          playsInline
         />
-      </div>
+      </div> */}
     </div>
   );
 }

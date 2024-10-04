@@ -2,14 +2,14 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link, { type LinkProps } from "next/link";
 import { createContext, useContext, useState } from "react";
-
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 // import MenuIcon from "@/components/icons/menu";
 // import X from "@/components/icons/x";
 
 const SIDEBAR_WIDTH = {
-  OPEN: "270px",
-  CLOSED: "100px",
+  OPEN: "250px",
+  CLOSED: "105px",
 } as const;
 
 /*´:°•.°+.*•´.*:˚.°*.˚•´.°:°•.°•.*•´.*:˚.°*.˚•´.°:°•.°+.*•´.*:*/
@@ -151,12 +151,17 @@ export function MobileSidebar({
 
 export function SidebarLink({ link, className, ...props }: TSidebarLink) {
   const { open, animate } = useSidebar();
+  const pathname = usePathname();
+  console.log("pathname", pathname);
+  console.log("link.href", link.href);
+  console.log("pathname === /" + link.href, pathname === "/" + link.href);
   return (
     <Link
       href={link.href}
       className={cn(
-        "flex items-center justify-start gap-2  group/sidebar py-2 ml-4",
-        className
+        "flex items-center justify-start gap-2  group/sidebar py-2 ml-4 pl-2 rounded-lg",
+        className,
+        pathname === "/" + link.href ? "bg-white text-black" : ""
       )}
       {...props}
     >
