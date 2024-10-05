@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/buttonn";
 
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import { useState, useEffect, useRef } from "react"; // Add useRef
