@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { EmailTemplate } from '@/components/emails/investorWhitelist';
 import { Resend } from 'resend';
+import createEmbeddedWalletFromEmail from '@/components/client/createWalletFromEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -15,6 +16,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (!email || !tokenSymbol) {
     return res.status(400).json({ error: 'Missing email or tokenSymbol in request body' });
   }
+
+  await createEmbeddedWalletFromEmail(email);
 
   try {
     const { data, error } = await resend.emails.send({
