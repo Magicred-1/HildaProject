@@ -32,9 +32,11 @@ export default function Home() {
     return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
   return (
-    <div className="flex h-[100vh]">
+    <div className="flex md:h-[100vh] h-full">
       {isMobile?<Navbar/>:<SideBar/>}
-      <div className="h-full w-full border-l-2 border-t-2 rounded-tl-[2rem] mt-[0.25px] flex justify-center items-center">
+      <div className="h-full md:w-full w-[90%] md:border-l-2 md:border-t-2 md:rounded-tl-[2rem] md:mt-[0.25px] flex justify-center items-center
+      mt-5 mx-auto
+      md:pb-0 pb-24">
         <SignupFormDemo />
       </div>
     </div>
@@ -58,14 +60,14 @@ export function SignupFormDemo() {
     });
   };
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black border border-neutral-400">
+    <div className="max-w-md w-full mx-auto rounded-xl md:rounded-2xl p-4 md:p-8 shadow-input bg-black border border-neutral-400">
       <h2 className="font-bold text-xl  text-neutral-200">Create a new bond</h2>
       <p className=" text-sm max-w-sm mt-2 text-neutral-300">
         Login to aceternity if you can because we don&apos;t have a login flow
         yet
       </p>
 
-      <form className="my-8 w-[60%]" onSubmit={handleSubmit}>
+      <form className="my-8 w-[80%] md:w-full mx-auto" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4 ">
           <LabelInputContainer>
             <Label htmlFor="name">Name</Label>
