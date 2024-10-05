@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 
@@ -12,6 +11,9 @@ import {
   CircleArrowLeft,
   CircleUserRound,
   ChartArea,
+  HandCoins,
+  BadgePlus,
+  ShoppingCart,
 } from "lucide-react";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/side";
 
@@ -91,16 +93,37 @@ const LINKS_ITEMS = [
       />
     ),
   },
-  // {
-  //   label: "Profile",
-  //   href: "dashboard",
-  //   icon: (
-  //     <Settings
-  //       className="flex-shrink-0 size-5 text-primary w-10 h-10"
-  //       strokeWidth={1.5}
-  //     />
-  //   ),
-  // },
+  {
+    label: "Make Bound",
+    href: "make-bound",
+    icon: (
+      <HandCoins
+        className="flex-shrink-0 size-5 text-primary w-10 h-10"
+        strokeWidth={1.5}
+      />
+    ),
+  },
+  {
+    label: "Whitelist",
+    href: "whitelist",
+    icon: (
+      <BadgePlus
+        className="flex-shrink-0 size-5 text-primary w-10 h-10"
+        strokeWidth={1.5}
+      />
+    ),
+  },
+  {
+    label: "Buy Bound",
+    href: "buy-bound",
+    icon: (
+      <ShoppingCart
+        className="flex-shrink-0 size-5 text-primary w-10 h-10"
+        strokeWidth={1.5}
+      />
+    ),
+  },
+
   {
     label: "Settings",
     href: "settings",
