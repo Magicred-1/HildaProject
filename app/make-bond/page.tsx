@@ -51,9 +51,9 @@ const SignupFormDemo = () => {
     e.preventDefault();
     console.log("Form submitted");
     toast.promise(promise, {
-      loading: "Loading...",
+      loading: "Registering...",
       success: (data: any) => {
-        return `${data.name} toast has been added`;
+        return `Bond deployed successfully`;
       },
       error: "Error",
     });

@@ -24,9 +24,9 @@ export default function Home() {
       <div className="h-full w-full border-l-2 border-t-2 rounded-tl-[2rem] mt-[0.25px] grid grid-cols-2 transition-all duration-300 ease-in-out pt-4 px-24 gap-4">
         <Card
           logoSrc="/shapes/1.png"
-          mainTitle="Bond"
-          websiteUrl="https://www.google.com"
-          lastUpdate="2024-02-01"
+          mainTitle="CDA"
+          websiteUrl="Credit Agricole"
+          lastUpdate="22M / 3% / 2*"
           cardImageSrc="/card.png"
         />
         <Card

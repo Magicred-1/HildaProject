@@ -161,7 +161,7 @@ export function SidebarLink({ link, className, ...props }: TSidebarLink) {
       className={cn(
         "flex items-center justify-start gap-2  group/sidebar py-2 ml-4 pl-2 rounded-xl",
         className,
-        pathname === "/" + link.href ? " bg-[#BE86F4] text-black" : ""
+        pathname === "/" + link.href ? " bg-gray-700" : ""
       )}
       {...props}
     >
