@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
       const emailResponse = await resend.emails.send({
         from: 'Hilda <contact@hildaproject.xyz>',
         to: [email],
-        subject: `Hello, you have been added to the whitelist for ${tokenSymbol}`,
+        subject: `Hello, you have been added to the whitelist for ${tokenSymbol} check it out in <a href="https://hildaproject.xyz/buy-bond">Hilda</a>`,
         react: EmailTemplate({
           email,
           tokenSymbol,

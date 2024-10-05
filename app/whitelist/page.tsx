@@ -70,7 +70,7 @@ export default function Home() {
 }
 
 export function CommandDemo() {
-  const tokenSymbol = "MyToken"; // This is the token symbol that will be included in the email
+  const tokenSymbol = "CDA"; // This is the token symbol that will be included in the email
 
   return (
     <div className="mt-12 w-full flex flex-col items-center md:text-4xl text-3xl font-bold">Whitelist
