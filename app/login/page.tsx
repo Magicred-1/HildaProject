@@ -99,16 +99,6 @@ function Hero() {
           Login
         </Button>
       </div>
-      {/* <div className="w-full h-full relative overflow-hidden">
-        <video
-          ref={videoRef}
-          src="/video.mp4"
-          className="absolute top-0 right-0 w-full h-full object-cover"
-          loop
-          muted
-          playsInline
-        />
-      </div> */}
     </div>
   );
 }
