@@ -16,10 +16,24 @@ import {
 } from "@/components/ui/popover";
 import { toast } from "sonner";
 
+import Navbar from "@/components/ui/navbar";
+import { useState, useEffect } from "react";
+
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkIfMobile = () => {
+      const screenWidth = window.innerWidth;
+      setIsMobile(screenWidth < 768);
+    };
+    checkIfMobile();
+    console.log(isMobile);
+    window.addEventListener("resize", checkIfMobile);
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, []);
   return (
     <div className="flex h-[100vh]">
-      <SideBar />
+      {isMobile?<Navbar/>:<SideBar/>}
       <div className="h-full w-full border-l-2 border-t-2 rounded-tl-[2rem] mt-[0.25px] flex justify-center items-center">
         <SignupFormDemo />
       </div>
@@ -51,7 +65,7 @@ export function SignupFormDemo() {
         yet
       </p>
 
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form className="my-8 w-[60%]" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4 ">
           <LabelInputContainer>
             <Label htmlFor="name">Name</Label>

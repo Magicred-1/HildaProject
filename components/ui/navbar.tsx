@@ -19,7 +19,7 @@ export default function Navbar() {
 
     return (
         <div className="fixed z-10 bottom-0 flex justify-between items-center px-6 py-2 w-full h-[10vh]
-        border-solid border-t-4 border-white">
+        border-solid border-t-4 border-white bg-black">
         
             <ChartArea
             className={`flex-shrink-0 size-5 text-primary w-14 h-14 rounded-lg p-2
