@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div className="flex h-[100vh]">
-      {isMobile?<Navbar/>:<SideBar/>}
+      {isMobile ? <Navbar /> : <SideBar />}
       <div className="h-full w-full border-l-2 border-t-2 rounded-tl-[2rem] mt-[0.25px] flex justify-center items-center">
         <SignupFormDemo />
       </div>
@@ -42,7 +42,7 @@ export default function Home() {
   );
 }
 
-export function SignupFormDemo() {
+function SignupFormDemo() {
   const promise = () =>
     new Promise((resolve) =>
       setTimeout(() => resolve({ name: "Sonner" }), 2000)
@@ -153,7 +153,7 @@ const LabelInputContainer = ({
   );
 };
 
-export function DatePickerDemo() {
+function DatePickerDemo() {
   const [date, setDate] = React.useState<Date>();
 
   return (
