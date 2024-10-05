@@ -123,17 +123,6 @@ const LINKS_ITEMS = [
       />
     ),
   },
-
-  {
-    label: "Settings",
-    href: "settings",
-    icon: (
-      <Settings
-        className="flex-shrink-0 size-5 text-primary w-10 h-10"
-        strokeWidth={1.5}
-      />
-    ),
-  },
   {
     label: "Profile",
     href: "profile",
