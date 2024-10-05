@@ -94,8 +94,8 @@ const LINKS_ITEMS = [
     ),
   },
   {
-    label: "Make Bound",
-    href: "make-bound",
+    label: "Make Bond",
+    href: "make-bond",
     icon: (
       <HandCoins
         className="flex-shrink-0 size-5 text-primary w-10 h-10"
@@ -114,8 +114,8 @@ const LINKS_ITEMS = [
     ),
   },
   {
-    label: "Buy Bound",
-    href: "buy-bound",
+    label: "Buy Bond",
+    href: "buy-bond",
     icon: (
       <ShoppingCart
         className="flex-shrink-0 size-5 text-primary w-10 h-10"
