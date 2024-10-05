@@ -1,4 +1,4 @@
-// @typescript-eslint/no-explicit-any
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 "use client";
 import { SideBar } from "@/components/ui/sidebar";
@@ -42,7 +42,7 @@ export default function Home() {
   );
 }
 
-function SignupFormDemo() {
+const SignupFormDemo = () => {
   const promise = () =>
     new Promise((resolve) =>
       setTimeout(() => resolve({ name: "Sonner" }), 2000)
@@ -128,7 +128,7 @@ function SignupFormDemo() {
       </form>
     </div>
   );
-}
+};
 
 const BottomGradient = () => {
   return (
@@ -153,7 +153,7 @@ const LabelInputContainer = ({
   );
 };
 
-function DatePickerDemo() {
+const DatePickerDemo = () => {
   const [date, setDate] = React.useState<Date>();
 
   return (
@@ -180,4 +180,4 @@ function DatePickerDemo() {
       </PopoverContent>
     </Popover>
   );
-}
+};

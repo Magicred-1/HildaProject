@@ -42,7 +42,7 @@ export default function Home() {
   }, []);
   return (
     <div className="flex h-[100vh]">
-      {isMobile?<Navbar/>:<SideBar/>}
+      {isMobile ? <Navbar /> : <SideBar />}
       <div className="h-full w-full border-l-2 border-t-2 rounded-tl-[2rem] mt-[0.25px] flex items-center justify-center">
         <CommandDemo />
       </div>
@@ -50,7 +50,7 @@ export default function Home() {
   );
 }
 
-export function CommandDemo() {
+const CommandDemo = () => {
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
@@ -97,4 +97,4 @@ export function CommandDemo() {
       </CommandList>
     </Command>
   );
-}
+};
