@@ -1,41 +1,36 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextRequest, NextResponse } from 'next/server';
 import { EmailTemplate } from '@/components/emails/investorWhitelist';
 import { Resend } from 'resend';
 import createEmbeddedWalletFromEmail from '@/components/client/createWalletFromEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
+export async function POST(req: NextRequest) {
+    const body = await req.json();
+    const { email, tokenSymbol } = body;
 
-  const { email, tokenSymbol } = req.body;
+    // Validate required fields
+    if (!email || !tokenSymbol) {
+      return NextResponse.json({ error: 'Missing email or tokenSymbol in request body' }, { status: 400 });
+    }
 
-  // Validate required fields
-  if (!email || !tokenSymbol) {
-    return res.status(400).json({ error: 'Missing email or tokenSymbol in request body' });
-  }
+    // Create embedded wallet for the email
+    await createEmbeddedWalletFromEmail(email);
 
-  await createEmbeddedWalletFromEmail(email);
-
-  try {
+    // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'Hilda <contact@hildaproject.xyz>',
       to: [email],
       subject: `Hello you have been added to the whitelist for ${tokenSymbol}`,
-      react: EmailTemplate({ 
+      react: EmailTemplate({
         email,
-        tokenSymbol
+        tokenSymbol,
       }),
     });
 
     if (error) {
-      return res.status(400).json(error);
+      return NextResponse.json({ error }, { status: 400 });
     }
 
-    res.status(200).json(data);
-  } catch (err) {
-    res.status(500).json({ error: 'Something went wrong while sending the email.' });
-  }
-};
+    return NextResponse.json(data, { status: 200 });
+}

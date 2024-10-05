@@ -15,6 +15,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { toast } from "sonner";
+import Navbar from "@/components/ui/navbar";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -31,7 +32,7 @@ export default function Home() {
 
   return (
     <div className="flex h-[100vh]">
-      <SideBar />
+      {isMobile?<Navbar/>:<SideBar/>}
       <div className="h-full w-full border-l-2 border-t-2 rounded-tl-[2rem] mt-[0.25px] flex justify-center items-center">
         <SignupFormDemo />
       </div>

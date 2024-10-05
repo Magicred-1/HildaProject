@@ -3,7 +3,21 @@ import { SideBar } from "@/components/ui/sidebar";
 import React from "react";
 import Card from "@/components/ui/card";
 
+import Navbar from "@/components/ui/navbar";
+import { useState, useEffect } from "react";
+
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkIfMobile = () => {
+      const screenWidth = window.innerWidth;
+      setIsMobile(screenWidth < 768);
+    };
+    checkIfMobile();
+    console.log(isMobile);
+    window.addEventListener("resize", checkIfMobile);
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, []);
   return (
     <div className="flex h-[100vh]">
       <SideBar />
