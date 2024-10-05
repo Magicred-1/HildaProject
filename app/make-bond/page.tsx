@@ -1,3 +1,5 @@
+// @typescript-eslint/no-explicit-any
+
 "use client";
 import { SideBar } from "@/components/ui/sidebar";
 import React, { useEffect, useState } from "react";

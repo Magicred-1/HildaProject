@@ -3,7 +3,7 @@ import { SideBar } from "@/components/ui/sidebar";
 import React from "react";
 import Card from "@/components/ui/card";
 
-import Navbar from "@/components/ui/navbar";
+// import Navbar from "@/components/ui/navbar";
 import { useState, useEffect } from "react";
 
 export default function Home() {

@@ -3,12 +3,12 @@
 import React from "react";
 import { SideBar } from "@/components/ui/sidebar";
 import {
-  Calculator,
-  Calendar,
-  CreditCard,
-  Settings,
+  // Calculator,
+  // Calendar,
+  // CreditCard,
+  // Settings,
   Smile,
-  User,
+  // User,
   Bean,
   BicepsFlexed,
   Brain,
@@ -22,7 +22,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-  CommandSeparator,
+  // CommandSeparator,
   CommandShortcut,
 } from "@/components/ui/command";
 
@@ -71,6 +71,10 @@ export function CommandDemo() {
           <CommandItem>
             <Bean className="mr-2 h-4 w-4" />
             <span>Benoit Martin</span>
+          </CommandItem>
+          <CommandItem>
+            <Smile className="mr-2 h-4 w-4" />
+            <span>Guénolé de Cadoudal</span>
           </CommandItem>
           <CommandItem>
             <Smile className="mr-2 h-4 w-4" />
