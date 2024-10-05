@@ -1,4 +1,9 @@
 // Input component extends from shadcnui - https://ui.shadcn.com/docs/components/input
+
+/* eslint-disable @typescript-eslint/no-empty-object-type */
+/* eslint-disable prefer-const */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 import * as React from "react";
 import { cn } from "@/lib/utils";

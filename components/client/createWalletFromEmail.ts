@@ -1,6 +1,6 @@
 'use server';
 
-const createEmbeddedWalletFromEmail = async (userEmail: string): Promise<any> => {
+const createEmbeddedWalletFromEmail = async (userEmail: string) => {
     const DYNAMIC_BEARER_TOKEN = "dyn_wRrgPXn1jlaJOCuY3QHsQfD6MekeJms39c91fUeXCsgMWmvn1h4qbyXY";
     const ENV_KEY = "6d869255-8971-474a-bf98-826918ac83e9";
 
