@@ -41,9 +41,11 @@ export default function Home() {
     return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
   return (
-    <div className="flex h-[100vh]">
+    <div className="flex md:h-[100vh] h-full">
       {isMobile ? <Navbar /> : <SideBar />}
-      <div className="h-full w-full border-l-2 border-t-2 rounded-tl-[2rem] mt-[0.25px] flex items-center justify-center">
+      <div className="h-full w-full md:border-l-2 md:border-t-2 md:rounded-tl-[2rem] md:mt-[0.25px] 
+      mt-4
+      flex items-center justify-center">
         <CommandDemo />
       </div>
     </div>
@@ -63,7 +65,8 @@ const CommandDemo = () => {
     return () => document.removeEventListener("keydown", down);
   }, []);
   return (
-    <Command className="rounded-lg border shadow-md w-1/2 h-3/4">
+    <div className="mt-12 w-full flex flex-col items-center md:text-4xl text-3xl font-bold">Whitelist
+    <Command className="rounded-lg border shadow-md w-[90%] h-3/4 mt-8">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
@@ -96,5 +99,6 @@ const CommandDemo = () => {
         </CommandGroup>
       </CommandList>
     </Command>
+    </div>
   );
 };
