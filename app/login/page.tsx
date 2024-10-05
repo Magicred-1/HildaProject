@@ -54,13 +54,9 @@ function Header() {
     <div className="flex items-center justify-between h-[8vh] border-b-2 w-[95vw]">
       <div className="text-4xl font-black flex items-center gap-2">
         <Image src={`/logo.svg`} alt="logo" width={35} height={35} />
-        H!lda
+        Hilda
       </div>
-      <div className="flex gap-8 text-xl">
-        <div>about</div>
-        <div>contact</div>
-        <div>team</div>
-      </div>
+      <div className="flex gap-8 text-xl"></div>
       <div className=" items-center flex gap-1 justify-center ">
         <div>Vierzon</div>
         <div className="pt-2">*</div>
