@@ -52,7 +52,7 @@ const SignupFormDemo = () => {
     console.log("Form submitted");
     toast.promise(promise, {
       loading: "Registering...",
-      success: (data: any) => {
+      success: (data) => {
         return `Bond deployed successfully`;
       },
       error: "Error",
