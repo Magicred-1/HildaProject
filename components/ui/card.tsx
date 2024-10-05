@@ -95,7 +95,10 @@ const App: React.FC<CardProps> = ({
   const handleClick = () => setStep((prevStep) => ((prevStep % 3) + 1) as Step);
 
   const currentStyle = stepStyles[step];
-  const router = useRouter();
+  const promise = () =>
+    new Promise((resolve) =>
+      setTimeout(() => resolve({ name: "Sonner" }), 2000)
+    );
 
   return (
     <main className="bg-background text-black relative flex items-start justify-center bg-cover bg-center md:items-center">
@@ -171,7 +174,15 @@ const App: React.FC<CardProps> = ({
                 className="absolute -top-8 right-8 -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => toast.success("Bond created successfully")}
+                onClick={() =>
+                  toast.promise(promise, {
+                    loading: "Sending Transaction...",
+                    success: (data: any) => {
+                      return `Bond purchased successfully`;
+                    },
+                    error: "Error",
+                  })
+                }
               >
                 View Details
               </motion.button>
