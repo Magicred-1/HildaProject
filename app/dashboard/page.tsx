@@ -300,6 +300,8 @@ export default function Home() {
           <div className="flex flex-col gap-8 justify-center items-center mt-8">
 
             <div className="flex flex-col gap-2 justify-center items-center">
+
+              <div className="-ml-16">
             <FlightWidget
               logoSrc="/shapes/1.png"
               mainTitle="$CDA"
@@ -309,7 +311,9 @@ export default function Home() {
               mc="$35M"
               maturity="05 Oct, 2025"
             />
-
+            </div>
+            
+            <div className="ml-16">
           <Status
               status="Good"
               progress="80%"
@@ -362,9 +366,10 @@ export default function Home() {
               ]}
             />
             </div>
-
+            </div>
             <div className="flex flex-col gap-2 justify-center items-center">
 
+            <div className="-ml-16">
             <FlightWidget
               logoSrc="/shapes/1.png"
               mainTitle="$CDA.e"
@@ -374,7 +379,9 @@ export default function Home() {
               mc="$23M"
               maturity="07 Jan, 2026"
             />
+            </div>
 
+            <div className="ml-16">
             <Status
               status="Bad"
               progress="35%"
@@ -426,11 +433,13 @@ export default function Home() {
                 },
               ]}
             />
+            </div>
 
             </div>
 
             <div className="flex flex-col gap-2 justify-center items-center">
 
+            <div className="-ml-16">
             <FlightWidget
               logoSrc="/shapes/1.png"
               mainTitle="$CDA.d"
@@ -440,7 +449,9 @@ export default function Home() {
               mc="$90M"
               maturity="23 Apr, 2025"
             />
+            </div>
 
+            <div className="ml-16"> 
             <Status
               status="yes"
               progress="67%"
@@ -492,6 +503,7 @@ export default function Home() {
                 },
               ]}
             />
+            </div>
 
             </div>
 
