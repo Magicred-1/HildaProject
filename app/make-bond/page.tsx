@@ -33,9 +33,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex h-[100vh]">
+    <div className="flex md:h-[100vh] h-full">
       {isMobile ? <Navbar /> : <SideBar />}
-      <div className="h-full w-full border-l-2 border-t-2 rounded-tl-[2rem] mt-[0.25px] flex justify-center items-center">
+      <div className="h-full md:w-full md:border-l-2 md:border-t-2 md:rounded-tl-[2rem] md:mt-[0.25px] 
+      w-[80%] mx-auto rounded-xl mt-28 md:pb-0 pb-32
+      flex justify-center items-center">
         <SignupFormDemo />
       </div>
     </div>
@@ -59,7 +61,7 @@ const SignupFormDemo = () => {
     });
   };
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black border border-neutral-400">
+    <div className="max-w-md w-full mx-auto md:rounded-2xl rounded-xl p-8 md:p-8 shadow-input bg-black border border-neutral-400">
       <h2 className="font-bold text-xl  text-neutral-200">Create a new bond</h2>
 
       <form className="my-8" onSubmit={handleSubmit}>
@@ -115,7 +117,8 @@ const SignupFormDemo = () => {
         </div>
 
         <button
-          className="bg-gradient-to-br relative group/btn  from-zinc-900  to-neutral-600 block bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="bg-gradient-to-br relative group/btn  from-zinc-900  to-neutral-600 block bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]
+          md:mt-0 mt-10"
           type="submit"
         >
           Sign up &rarr;
