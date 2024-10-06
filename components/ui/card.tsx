@@ -184,7 +184,7 @@ const App: React.FC<CardProps> = ({
                   })
                 }
               >
-                View Details
+                Buy Bond
               </motion.button>
               {[1, 2, 3].map((index) => (
                 <motion.img

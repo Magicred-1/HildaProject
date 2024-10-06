@@ -119,7 +119,7 @@ const SignupFormDemo = () => {
           md:mt-0 mt-10"
           type="submit"
         >
-          Sign up &rarr;
+          CREATE BOND &rarr;
           <BottomGradient />
         </button>
       </form>
