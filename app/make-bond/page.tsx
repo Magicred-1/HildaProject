@@ -52,8 +52,7 @@ const SignupFormDemo = () => {
     console.log("Form submitted");
     toast.promise(promise, {
       loading: "Registering...",
-      success: (data) => {
-        console.log(data);
+      success: () => {
         return `Bond deployed successfully`;
       },
       error: "Error",
@@ -70,7 +69,7 @@ const SignupFormDemo = () => {
             <Input id="name" placeholder="CACIB" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="isin">Isin</Label>
+            <Label htmlFor="isin">Issin</Label>
             <Input id="isin" placeholder="FR12.." type="text" />
           </LabelInputContainer>
         </div>
@@ -86,7 +85,7 @@ const SignupFormDemo = () => {
         </div>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4 ">
           <LabelInputContainer>
-            <Label htmlFor="unitval">Unit Vale</Label>
+            <Label htmlFor="unitval">Unit Value</Label>
             <Input id="unitval" placeholder="100" type="number" />
           </LabelInputContainer>
           <LabelInputContainer>
