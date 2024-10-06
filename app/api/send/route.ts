@@ -26,7 +26,6 @@ export async function POST(req: NextRequest) {
         to: [email],
         subject: `You have been added to the whitelist for ${tokenSymbol}`,
         react: EmailTemplate({
-          email,
           tokenSymbol,
         }),
       });
