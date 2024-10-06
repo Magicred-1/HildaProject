@@ -17,11 +17,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Create embedded wallet for the email
-    try {
-      await createEmbeddedWalletFromEmail(email);
-    } catch (walletError) {
-      return NextResponse.json({ error: `Failed to create wallet` }, { status: 500 });
-    }
+    await createEmbeddedWalletFromEmail(email);
 
     // Send email using Resend service
     try {

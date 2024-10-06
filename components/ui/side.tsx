@@ -4,6 +4,7 @@ import Link, { type LinkProps } from "next/link";
 import { createContext, useContext, useState } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { ShieldCheck } from "lucide-react";
 // import MenuIcon from "@/components/icons/menu";
 // import X from "@/components/icons/x";
 
@@ -172,9 +173,17 @@ export function SidebarLink({ link, className, ...props }: TSidebarLink) {
           display: animate ? (open ? "inline-block" : "none") : "inline-block",
           opacity: animate ? (open ? 1 : 0) : 1,
         }}
-        className="text-primary text-2xl group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+        className="text-primary text-2xl group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre !p-0 !m-0"
       >
-        {link.label}
+        <div className="flex items-center gap-2">
+          {link.label}
+          {link.href === "profile" && (
+            <ShieldCheck
+              className="flex-shrink-0 size-5 text-primary w-6 h-6"
+              strokeWidth={1}
+            />
+          )}
+        </div>
       </motion.span>
     </Link>
   );

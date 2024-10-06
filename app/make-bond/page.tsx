@@ -52,7 +52,7 @@ const SignupFormDemo = () => {
     console.log("Form submitted");
     toast.promise(promise, {
       loading: "Registering...",
-      success: (data) => {
+      success: () => {
         return `Bond deployed successfully`;
       },
       error: "Error",
@@ -61,10 +61,6 @@ const SignupFormDemo = () => {
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black border border-neutral-400">
       <h2 className="font-bold text-xl  text-neutral-200">Create a new bond</h2>
-      <p className=" text-sm max-w-sm mt-2 text-neutral-300">
-        Login to aceternity if you can because we don&apos;t have a login flow
-        yet
-      </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4 ">
@@ -73,7 +69,7 @@ const SignupFormDemo = () => {
             <Input id="name" placeholder="CACIB" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="isin">Isin</Label>
+            <Label htmlFor="isin">Issin</Label>
             <Input id="isin" placeholder="FR12.." type="text" />
           </LabelInputContainer>
         </div>
@@ -89,7 +85,7 @@ const SignupFormDemo = () => {
         </div>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4 ">
           <LabelInputContainer>
-            <Label htmlFor="unitval">Unit Vale</Label>
+            <Label htmlFor="unitval">Unit Value</Label>
             <Input id="unitval" placeholder="100" type="number" />
           </LabelInputContainer>
           <LabelInputContainer>

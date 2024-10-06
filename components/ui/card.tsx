@@ -177,7 +177,7 @@ const App: React.FC<CardProps> = ({
                 onClick={() =>
                   toast.promise(promise, {
                     loading: "Sending Transaction...",
-                    success: (data: any) => {
+                    success: () => {
                       return `Bond purchased successfully`;
                     },
                     error: "Error",

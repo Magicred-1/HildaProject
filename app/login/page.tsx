@@ -60,6 +60,7 @@ function Header() {
       </div>
       <div className="flex gap-8 text-xl">
       </div>
+      <div className="flex gap-8 text-xl"></div>
       <div className=" items-center flex gap-1 justify-center ">
         <div>Vierzon</div>
         <div className="pt-2">*</div>
