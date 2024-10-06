@@ -15,29 +15,6 @@ import {
 } from "@/components/ui/command";
 import Navbar from "@/components/ui/navbar";
 
-// Email Sending Function
-async function sendWhitelistEmail(email: string, tokenSymbol: string) {
-  try {
-    const response = await fetch("/api/send/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, tokenSymbol }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Error: ${response.statusText}`);
-    }
-
-    const data = await response.json();
-    console.log(data);
-    toast.success(`Email sent to ${email} for ${tokenSymbol}`);
-  } catch (error) {
-    toast.error(`Failed to send email: ${error}`);
-  }
-}
-
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -67,8 +44,6 @@ export default function Home() {
 }
 
 function CommandDemo() {
-  const tokenSymbol = "CDA"; // This is the token symbol that will be included in the email
-
   return (
     <div className="mt-12 w-full flex flex-col items-center md:text-4xl text-3xl font-bold">
       Whitelist
@@ -78,49 +53,109 @@ function CommandDemo() {
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Whitelist an Investor">
             <CommandItem
-              onSelect={() =>
-                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
-              }
+              onSelect={() => {
+                const promise = () =>
+                  new Promise((resolve) =>
+                    setTimeout(() => resolve({ name: "Sonner" }), 2000)
+                  );
+                toast.promise(promise, {
+                  loading: "Whitelisting...",
+                  success: () => {
+                    return `Successfully whitelisted`;
+                  },
+                  error: "Error",
+                });
+              }}
             >
               <Bean className="mr-2 h-4 w-4" />
               <span>Benoit Martin</span>
             </CommandItem>
             <CommandItem
-              onSelect={() =>
-                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
-              }
+              onSelect={() => {
+                const promise = () =>
+                  new Promise((resolve) =>
+                    setTimeout(() => resolve({ name: "Sonner" }), 2000)
+                  );
+                toast.promise(promise, {
+                  loading: "Whitelisting...",
+                  success: () => {
+                    return `Successfully whitelisted`;
+                  },
+                  error: "Error",
+                });
+              }}
             >
               <BicepsFlexed className="mr-2 h-4 w-4" />
               <span>Guénolé de Cadoudal</span>
             </CommandItem>
             <CommandItem
-              onSelect={() =>
-                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
-              }
+              onSelect={() => {
+                const promise = () =>
+                  new Promise((resolve) =>
+                    setTimeout(() => resolve({ name: "Sonner" }), 2000)
+                  );
+                toast.promise(promise, {
+                  loading: "Whitelisting...",
+                  success: () => {
+                    return `Successfully whitelisted`;
+                  },
+                  error: "Error",
+                });
+              }}
             >
               <Smile className="mr-2 h-4 w-4" />
               <span>Jhon Doe</span>
             </CommandItem>
             <CommandItem
-              onSelect={() =>
-                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
-              }
+              onSelect={() => {
+                const promise = () =>
+                  new Promise((resolve) =>
+                    setTimeout(() => resolve({ name: "Sonner" }), 2000)
+                  );
+                toast.promise(promise, {
+                  loading: "Whitelisting...",
+                  success: () => {
+                    return `Successfully whitelisted`;
+                  },
+                  error: "Error",
+                });
+              }}
             >
               <Cat className="mr-2 h-4 w-4" />
               <span>Jean Nadaud</span>
             </CommandItem>
             <CommandItem
-              onSelect={() =>
-                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
-              }
+              onSelect={() => {
+                const promise = () =>
+                  new Promise((resolve) =>
+                    setTimeout(() => resolve({ name: "Sonner" }), 2000)
+                  );
+                toast.promise(promise, {
+                  loading: "Whitelisting...",
+                  success: () => {
+                    return `Successfully whitelisted`;
+                  },
+                  error: "Error",
+                });
+              }}
             >
               <Brain className="mr-2 h-4 w-4" />
               <span>Marcel Duchamp</span>
             </CommandItem>
             <CommandItem
-              onSelect={() =>
-                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
-              }
+              onSelect={() => {
+                const promise = () =>
+                  new Promise((resolve) =>
+                    setTimeout(() => resolve({ name: "Sonner" }), 2000)
+                  );
+                toast.promise(promise, {
+                  loading: "Whitelisting...",
+                  success: () => {
+                    return `Successfully whitelisted`;
+                  },
+                  error: "Error",
+                });
+              }}
             >
               <Building2 className="mr-2 h-4 w-4" />
               <span>Lucien Galtier</span>
