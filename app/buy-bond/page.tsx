@@ -47,14 +47,14 @@ export default function Home() {
             <Card
               logoSrc="/shapes/1.png"
               mainTitle="$CDA"
-              websiteUrl="Credit Agricole"
+              websiteUrl="Crédit Agricole"
               lastUpdate="TVL: 22M / Yield: 3.45% / ESG: 83"
               cardImageSrc="/card.png"
             />
             <Card
               logoSrc="/shapes/2.png"
               mainTitle="$SG"
-              websiteUrl="Societe General"
+              websiteUrl="Société Générale"
               lastUpdate="TVL: 14M / Yield: 2.23% / ESG: 92"
               cardImageSrc="/card.png"
             />
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="flex h-full pb-32">
           <Navbar />
           <div
-            className="h-full w-full mt-5 transition-all duration-300 ease-in-out
+            className="h-full w-full mt-24 transition-all duration-300 ease-in-out
       flex flex-col gap-6 items-center"
           >
             <div
@@ -95,12 +95,12 @@ export default function Home() {
               />
 
               <div className="text-black text-4xl font-normal px-4 py-4">
-                SG Bond
+                $CDA
               </div>
 
               <div className="text-black text-md font-normal px-4 py-2">
-                Schizo des prouts c cho <br />
-                2024-02-01
+                Crédit Agricole <br />
+                TVL: 22M / Yield: 3.45% / ESG: 83
               </div>
 
               {isOpen1 ? (
@@ -130,12 +130,12 @@ export default function Home() {
               />
 
               <div className="text-black text-4xl font-normal px-4 py-4">
-                SG Bond
+                $SG
               </div>
 
               <div className="text-black text-md font-normal px-4 py-2">
-                Schizo des prouts c cho <br />
-                2024-02-01
+                Société Générale <br />
+                TVL: 14M / Yield: 2.23% / ESG: 92
               </div>
 
               {isOpen2 ? (
@@ -165,12 +165,12 @@ export default function Home() {
               />
 
               <div className="text-black text-4xl font-normal px-4 py-4">
-                SG Bond
+                $LBP
               </div>
 
               <div className="text-black text-md font-normal px-4 py-2">
-                Schizo des prouts c cho <br />
-                2024-02-01
+                La Banque Postale <br />
+                TVL: 8.4M / Yield: 1.23% / ESG: 78
               </div>
 
               {isOpen3 ? (
@@ -200,12 +200,12 @@ export default function Home() {
               />
 
               <div className="text-black text-4xl font-normal px-4 py-4">
-                SG Bond
+                $BP
               </div>
 
               <div className="text-black text-md font-normal px-4 py-2">
-                Schizo des prouts c cho <br />
-                2024-02-01
+                Banque Populaire <br />
+                TVL: 2.5M / Yield: 4.1% / ESG: 67
               </div>
 
               {isOpen4 ? (

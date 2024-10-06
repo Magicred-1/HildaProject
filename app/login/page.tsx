@@ -50,11 +50,15 @@ function Header() {
     return () => clearInterval(timerId); // Cleanup on unmount
   }, []);
 
+  
+
   return (
     <div className="flex items-center justify-between h-[8vh] border-b-2 w-[95vw]">
       <div className="text-4xl font-black flex items-center gap-2">
         <Image src={`/logo.svg`} alt="logo" width={35} height={35} />
-        Hilda
+        H!lda
+      </div>
+      <div className="flex gap-8 text-xl">
       </div>
       <div className="flex gap-8 text-xl"></div>
       <div className=" items-center flex gap-1 justify-center ">
@@ -77,24 +81,59 @@ function Hero() {
     }
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      const screenWidth = window.innerWidth;
+      setIsMobile(screenWidth < 768);
+    };
+    checkIfMobile();
+    console.log(isMobile);
+    window.addEventListener("resize", checkIfMobile);
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, []);
+
   return (
-    <div className="w-full h-[92vh] flex">
-      <div className="w-full h-full relative">
-        <div className="absolute top-1/2 left-24 flex items-center gap-8 -translate-y-1/2">
-          <Image src={`/shape.svg`} alt="shape" width={65} height={65} />
-          <div className="text-4xl">
+    <div className="w-full h-full flex">
+    {isMobile ? (
+    
+      <div className="w-full h-full relative px-6 top-1/2 bg-black/10 mt-12">
+        <div className="absolute flex items-center gap-8">
+          <Image src={`/shape.svg`} alt="shape" width={50} height={50} />
+          <div className="text-3xl mt-12">
             A new way to <br />
-            <span className="font-black ml-8">Tokenize</span> assets
+            <span className="font-black">Tokenize</span> assets
           </div>
         </div>
         <Button
-          className="absolute bottom-48 left-48 text-2xl font-extrabold px-16 py-6"
+          className="text-2xl font-extrabold px-16 py-6 mt-44 ml-16"
           variant="reverse"
           onClick={() => setShowAuthFlow(true)}
         >
           Login
         </Button>
       </div>
+) : (
+ 
+  <div className="w-full h-full relative">
+  <div className="absolute top-1/2 left-24 flex items-center gap-8 -translate-y-1/2">
+    <Image src={`/shape.svg`} alt="shape" width={65} height={65} />
+    <div className="text-4xl">
+      A new way to <br />
+      <span className="font-black ml-8">Tokenize</span> assets
+    </div>
+  </div>
+  <Button
+    className="absolute bottom-48 left-48 text-2xl font-extrabold px-16 py-6"
+    variant="reverse"
+    onClick={() => setShowAuthFlow(true)}
+  >
+    Login
+  </Button>
+</div>
+
+    )}
     </div>
   );
 }
