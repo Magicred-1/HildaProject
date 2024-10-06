@@ -66,7 +66,7 @@ export default function Home() {
   );
 }
 
-export function CommandDemo() {
+function CommandDemo() {
   const tokenSymbol = "CDA"; // This is the token symbol that will be included in the email
 
   return (
