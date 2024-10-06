@@ -78,7 +78,7 @@ export default function Home() {
         <div className="flex h-full pb-32">
           <Navbar />
           <div
-            className="h-full w-full mt-5 transition-all duration-300 ease-in-out
+            className="h-full w-full mt-24 transition-all duration-300 ease-in-out
       flex flex-col gap-6 items-center"
           >
             <div
