@@ -3,11 +3,6 @@
 import { SideBar } from "@/components/ui/sidebar";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/ui/navbar";
-import Eight from "@/components/ui/eight";
-import RingChart from "@/components/ui/ring-chart";
-import Progress from "@/components/ui/progress";
-import GaugeChart from "@/components/ui/gauge";
-import BarChart from "@/components/ui/bar-chart";
 import {
   Table,
   TableBody,
