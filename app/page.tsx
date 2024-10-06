@@ -5,7 +5,6 @@ import Navbar from "@/components/ui/navbar";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const checkIfMobile = () => {
@@ -20,8 +19,8 @@ export default function Home() {
 
   return (
     <div className="flex h-[100vh]">
-      {isMobile?<Navbar/>:<SideBar/>}
-      <div className="h-full w-full border-l-2 border-t-2 rounded-tl-[2rem] mt-[0.25px]"></div>
+      {isMobile ? <Navbar /> : <SideBar />}
+      <div className="h-full w-full border-l border-t rounded-tl-[2rem] mt-[0.25px]"></div>
     </div>
   );
 }

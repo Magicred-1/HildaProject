@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { SideBar } from "@/components/ui/sidebar";
-import { Smile, Bean, BicepsFlexed, Brain, Building2 } from "lucide-react";
+import { Smile, Bean, BicepsFlexed, Brain, Building2, Cat } from "lucide-react";
 import { toast } from "sonner";
 import {
   Command,
@@ -79,7 +79,7 @@ function CommandDemo() {
           <CommandGroup heading="Whitelist an Investor">
             <CommandItem
               onSelect={() =>
-                sendWhitelistEmail("djasongadiou@gmail.com", tokenSymbol)
+                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
               }
             >
               <Bean className="mr-2 h-4 w-4" />
@@ -87,15 +87,15 @@ function CommandDemo() {
             </CommandItem>
             <CommandItem
               onSelect={() =>
-                sendWhitelistEmail("guenole.cadoudal@example.com", tokenSymbol)
+                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
               }
             >
-              <Smile className="mr-2 h-4 w-4" />
+              <BicepsFlexed className="mr-2 h-4 w-4" />
               <span>Guénolé de Cadoudal</span>
             </CommandItem>
             <CommandItem
               onSelect={() =>
-                sendWhitelistEmail("jhon.doe@example.com", tokenSymbol)
+                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
               }
             >
               <Smile className="mr-2 h-4 w-4" />
@@ -103,15 +103,15 @@ function CommandDemo() {
             </CommandItem>
             <CommandItem
               onSelect={() =>
-                sendWhitelistEmail("jean.nadaud@example.com", tokenSymbol)
+                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
               }
             >
-              <BicepsFlexed className="mr-2 h-4 w-4" />
+              <Cat className="mr-2 h-4 w-4" />
               <span>Jean Nadaud</span>
             </CommandItem>
             <CommandItem
               onSelect={() =>
-                sendWhitelistEmail("marcel.duchamp@example.com", tokenSymbol)
+                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
               }
             >
               <Brain className="mr-2 h-4 w-4" />
@@ -119,7 +119,7 @@ function CommandDemo() {
             </CommandItem>
             <CommandItem
               onSelect={() =>
-                sendWhitelistEmail("lucien.galtier@example.com", tokenSymbol)
+                sendWhitelistEmail("lcombaret@protonmail.com", tokenSymbol)
               }
             >
               <Building2 className="mr-2 h-4 w-4" />

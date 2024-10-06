@@ -43,7 +43,7 @@ export default function Home() {
       {!isMobile ? (
         <div className="flex h-[100vh]">
           <SideBar />
-          <div className="h-full w-full border-l-2 border-t-2 rounded-tl-[2rem] mt-[0.25px] grid grid-cols-2 transition-all duration-300 ease-in-out pt-4 px-24 gap-4">
+          <div className="h-full w-full border-l border-t rounded-tl-[2rem] mt-[0.25px] grid grid-cols-2 transition-all duration-300 ease-in-out pt-4 px-24 gap-4">
             <Card
               logoSrc="/shapes/1.png"
               mainTitle="$CDA"

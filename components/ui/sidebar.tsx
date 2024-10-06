@@ -12,7 +12,7 @@ import {
   ChartArea,
   HandCoins,
   BadgePlus,
-  ShoppingCart,
+  // ShoppingCart,
 } from "lucide-react";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/side";
 
@@ -112,16 +112,16 @@ const LINKS_ITEMS = [
       />
     ),
   },
-  {
-    label: "Buy Bond",
-    href: "buy-bond",
-    icon: (
-      <ShoppingCart
-        className="flex-shrink-0 size-5 text-primary w-10 h-10"
-        strokeWidth={1.5}
-      />
-    ),
-  },
+  // {
+  //   label: "Buy Bond",
+  //   href: "buy-bond",
+  //   icon: (
+  //     <ShoppingCart
+  //       className="flex-shrink-0 size-5 text-primary w-10 h-10"
+  //       strokeWidth={1.5}
+  //     />
+  //   ),
+  // },
   {
     label: "Profile",
     href: "profile",
