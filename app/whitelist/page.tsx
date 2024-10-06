@@ -59,9 +59,9 @@ function CommandDemo() {
                     setTimeout(() => resolve({ name: "Sonner" }), 2000)
                   );
                 toast.promise(promise, {
-                  loading: "Registering...",
+                  loading: "Whitelisting...",
                   success: () => {
-                    return `Bond deployed successfully`;
+                    return `Successfully whitelisted`;
                   },
                   error: "Error",
                 });
@@ -77,9 +77,9 @@ function CommandDemo() {
                     setTimeout(() => resolve({ name: "Sonner" }), 2000)
                   );
                 toast.promise(promise, {
-                  loading: "Registering...",
+                  loading: "Whitelisting...",
                   success: () => {
-                    return `Bond deployed successfully`;
+                    return `Successfully whitelisted`;
                   },
                   error: "Error",
                 });
@@ -95,9 +95,9 @@ function CommandDemo() {
                     setTimeout(() => resolve({ name: "Sonner" }), 2000)
                   );
                 toast.promise(promise, {
-                  loading: "Registering...",
+                  loading: "Whitelisting...",
                   success: () => {
-                    return `Bond deployed successfully`;
+                    return `Successfully whitelisted`;
                   },
                   error: "Error",
                 });
@@ -113,9 +113,9 @@ function CommandDemo() {
                     setTimeout(() => resolve({ name: "Sonner" }), 2000)
                   );
                 toast.promise(promise, {
-                  loading: "Registering...",
+                  loading: "Whitelisting...",
                   success: () => {
-                    return `Bond deployed successfully`;
+                    return `Successfully whitelisted`;
                   },
                   error: "Error",
                 });
@@ -131,9 +131,9 @@ function CommandDemo() {
                     setTimeout(() => resolve({ name: "Sonner" }), 2000)
                   );
                 toast.promise(promise, {
-                  loading: "Registering...",
+                  loading: "Whitelisting...",
                   success: () => {
-                    return `Bond deployed successfully`;
+                    return `Successfully whitelisted`;
                   },
                   error: "Error",
                 });
@@ -149,9 +149,9 @@ function CommandDemo() {
                     setTimeout(() => resolve({ name: "Sonner" }), 2000)
                   );
                 toast.promise(promise, {
-                  loading: "Registering...",
+                  loading: "Whitelisting...",
                   success: () => {
-                    return `Bond deployed successfully`;
+                    return `Successfully whitelisted`;
                   },
                   error: "Error",
                 });
